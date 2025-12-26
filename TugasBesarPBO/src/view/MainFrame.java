@@ -5,13 +5,18 @@ import java.awt.*;
 import com.formdev.flatlaf.FlatLightLaf;
 
 public class MainFrame extends JFrame {
+
     private JTabbedPane tabbedPane;
     private DashboardPanel dashboardPanel;
     private MobilPanel mobilPanel;
     private PenjualanPanel penjualanPanel;
     private LaporanPanel laporanPanel;
 
-    public MainFrame() {
+    private String username;
+
+    // Constructor menerima username dari Login
+    public MainFrame(String username) {
+        this.username = username;
         initComponents();
         setupFrame();
     }
@@ -28,7 +33,7 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Create header
+        // ================= HEADER =================
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(new Color(41, 128, 185));
         headerPanel.setPreferredSize(new Dimension(getWidth(), 70));
@@ -38,26 +43,34 @@ public class MainFrame extends JFrame {
         titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
         titleLabel.setForeground(Color.WHITE);
 
-        JLabel userLabel = new JLabel("Admin: User");
+        JLabel userLabel = new JLabel("Admin: " + username);
         userLabel.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         userLabel.setForeground(Color.WHITE);
 
         headerPanel.add(titleLabel, BorderLayout.WEST);
         headerPanel.add(userLabel, BorderLayout.EAST);
-
         add(headerPanel, BorderLayout.NORTH);
 
-        // Create tabbed pane
+        // ================= MENU BAR (LOGOUT) =================
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menuAkun = new JMenu("Akun");
+        JMenuItem menuLogout = new JMenuItem("Logout");
+
+        menuLogout.addActionListener(e -> logout());
+
+        menuAkun.add(menuLogout);
+        menuBar.add(menuAkun);
+        setJMenuBar(menuBar);
+
+        // ================= TABS =================
         tabbedPane = new JTabbedPane();
         tabbedPane.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 
-        // Create panels
         dashboardPanel = new DashboardPanel();
         mobilPanel = new MobilPanel();
         penjualanPanel = new PenjualanPanel();
         laporanPanel = new LaporanPanel();
 
-        // Add tabs
         tabbedPane.addTab("Dashboard", new ImageIcon("src/assets/dashboard.png"), dashboardPanel);
         tabbedPane.addTab("Manajemen Mobil", new ImageIcon("src/assets/car.png"), mobilPanel);
         tabbedPane.addTab("Penjualan", new ImageIcon("src/assets/sales.png"), penjualanPanel);
@@ -65,7 +78,7 @@ public class MainFrame extends JFrame {
 
         add(tabbedPane, BorderLayout.CENTER);
 
-        // Footer
+        // ================= FOOTER =================
         JPanel footerPanel = new JPanel();
         footerPanel.setBackground(new Color(236, 240, 241));
         footerPanel.setBorder(BorderFactory.createEmptyBorder(5, 20, 5, 20));
@@ -80,13 +93,25 @@ public class MainFrame extends JFrame {
 
     private void setupFrame() {
         setSize(1200, 700);
-        setLocationRelativeTo(null); // Center the frame
+        setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    private void logout() {
+        int confirm = JOptionPane.showConfirmDialog(
+                this,
+                "Yakin ingin logout?",
+                "Logout",
+                JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            new LoginFrame().setVisible(true);
+            dispose();
+        }
     }
 
     @Override
     public void dispose() {
-        // Clean up resources
         if (dashboardPanel != null) {
             dashboardPanel.stopRefreshTimer();
         }
