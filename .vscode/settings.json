@@ -1,0 +1,46 @@
+{
+  "java.project.sourcePaths": [
+    "TugasBesarPBO/src",
+    "src"
+  ],
+  "java.project.resourcePaths": [
+    "src/resources"
+  ],
+  "java.project.referencedLibraries": [
+    "lib\\commons-beanutils-1.9.4.jar",
+    "lib\\commons-collections-3.2.2.jar",
+    "lib\\commons-collections4-4.4.jar",
+    "lib\\commons-digester-2.1.jar",
+    "lib\\commons-io-2.11.0.jar",
+    "lib\\commons-lang3-3.12.0.jar",
+    "lib\\commons-logging-1.2 (2).jar",
+    "lib\\flatlaf-3.2.1.jar",
+    "lib\\gson-2.13.2.jar",
+    "lib\\itext-2.1.7.jar",
+    "lib\\jasperreports-6.20.0.jar",
+    "lib\\jasperreports-fonts-6.20.0.jar",
+    "lib\\javax.websocket-api-1.1.jar",
+    "lib\\miglayout-core-11.0 (1).jar",
+    "lib\\miglayout-swing-11.0 (1).jar",
+    "lib\\mysql-connector-j-9.4.0.jar",
+    "lib\\slf4j-api-2.0.17.jar",
+    "lib\\tyrus-client-1.17.jar",
+    "lib\\tyrus-core-1.17.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\jasperreports-fonts-6.20.0.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\tyrus-client-1.17.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\slf4j-api-2.0.17.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\commons-lang3-3.12.0.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\flatlaf-3.2.1.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\itext-2.1.7.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\miglayout-core-11.0 (1).jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\javax.websocket-api-1.1.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\miglayout-swing-11.0 (1).jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\tyrus-core-1.17.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\gson-2.13.2.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\jasperreports-6.20.0.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\commons-io-2.11.0.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\mysql-connector-j-9.4.0.jar",
+    "c:\\Users\\user\\OneDrive\\Documents\\TugasBesarPBO\\TugasBesarPBO\\lib\\commons-logging-1.2 (2).jar"
+  ]
+}
+
