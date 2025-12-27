@@ -102,7 +102,8 @@ public class MainFrame extends JFrame {
                 this,
                 "Yakin ingin logout?",
                 "Logout",
-                JOptionPane.YES_NO_OPTION);
+                JOptionPane.YES_NO_OPTION
+        );
 
         if (confirm == JOptionPane.YES_OPTION) {
             new LoginFrame().setVisible(true);
