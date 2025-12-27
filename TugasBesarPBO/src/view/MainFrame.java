@@ -83,7 +83,7 @@ public class MainFrame extends JFrame {
         footerPanel.setBackground(new Color(236, 240, 241));
         footerPanel.setBorder(BorderFactory.createEmptyBorder(5, 20, 5, 20));
 
-        JLabel footerLabel = new JLabel("© 2024 Dealer Mobil App - Real-time Monitoring System");
+        JLabel footerLabel = new JLabel("© 2025 Dealer Mobil App - Kelompok 2");
         footerLabel.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         footerLabel.setForeground(Color.DARK_GRAY);
 
