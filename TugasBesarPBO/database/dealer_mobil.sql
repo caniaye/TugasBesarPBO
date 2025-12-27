@@ -52,11 +52,22 @@ CREATE TABLE penjualan (
 -- DATA AWAL (SEED DATA)
 -- ================================
 
+<<<<<<< HEAD
 -- User login
 INSERT INTO user (username, password) VALUES
 ('admin', '123');
 
 -- Data mobil
+=======
+CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(50)
+);
+
+
+-- Insert data contoh
+>>>>>>> bc49ba2424442755a586e605b5809865650fc042
 INSERT INTO mobil (merk, model, tahun, warna, harga, stok) VALUES
 ('Toyota', 'Avanza', 2023, 'Hitam', 250000000, 10),
 ('Honda', 'Brio', 2023, 'Putih', 180000000, 8),
